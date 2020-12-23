@@ -25,7 +25,7 @@ func operation(number1 int, number2 int, currentOperator string) int {
 		fmt.Println("minus")
 		result = number1 - number2
 	}
-	fmt.Println(number1, number2, "===", result)
+	// fmt.Println(number1, number2, "===", result)
 	return result
 }
 
@@ -126,7 +126,7 @@ func getOperation(input string) {
 		}
 
 	}
-	fmt.Println(currentOperator)
+	// fmt.Println(currentOperator)
 	result := getResult(number, currentOperator, 0)
 	fmt.Println(result)
 
