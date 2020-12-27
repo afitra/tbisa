@@ -1,6 +1,7 @@
 package helper
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -39,12 +40,15 @@ func FormatValidationError(err error) []string {
 	var errors []string
 	if err.Error() == "EOF" {
 		errors = append(errors, "error input data")
-		// return ["error input data"]
+
 		return errors
 	}
+	fmt.Println("akan masuk lopppp")
 	for _, e := range err.(validator.ValidationErrors) {
+
 		errors = append(errors, e.Error())
 	}
+
 	return errors
 }
 func GoDotEnvVariable(key string) string {

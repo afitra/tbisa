@@ -1,0 +1,167 @@
+
+
+
+request /api/v1/team 
+method : POST
+request body : type JSON 
+
+        name :   string , required
+
+
+example
+    {
+    "name":"persik"
+    }
+
+
+response type JSON
+example 
+
+{
+    "meta": {
+        "message": "Team has been registered",
+        "code": 200,
+        "status": "success"
+    },
+    "data": {
+        "id": 3,
+        "name": "persik"
+    }
+}
+
+
+=====================================================================
+
+
+
+request /api/v1/player
+method: POST 
+request body : type JSON
+
+              name : string, required
+              age : int, required
+              position : string, required
+
+
+example
+{
+    "name":"danilo",
+    "age":23,
+    "position":"CF"
+ 
+}
+
+
+response type JSON 
+example 
+
+{
+    "meta": {
+        "message": "Player Register",
+        "code": 200,
+        "status": "success"
+    },
+    "data": {
+        "id": 4,
+        "team_id": 0,
+        "name": "danilo",
+        "age": 23,
+        "position": "SS"
+    }
+}
+
+
+
+=====================================================================
+
+request /api/v1/player/add
+method: POST 
+request body : type JSON
+
+              team_id : int, required
+              player_id : int, required
+       
+
+
+example
+
+{
+    "team_id":1,
+    "player_id":3
+ 
+}
+
+response type JSON 
+example 
+
+{
+    "meta": {
+        "message": "Player Register",
+        "code": 200,
+        "status": "success"
+    },
+    "data": {
+        "id": 3,
+        "team_id": 1,
+        "name": "danilo",
+        "age": 23,
+        "position": "SS"
+    }
+}
+
+
+
+
+
+=====================================================================
+
+request /api/v1/team/:id
+method: GET 
+request params :  type   Path Variables
+
+                id : int, required
+ 
+       
+
+
+example
+ 
+id : 1
+
+response type JSON 
+example 
+
+{
+    "meta": {
+        "message": "Team Detail",
+        "code": 200,
+        "status": "success"
+    },
+    "data": {
+        "id": 1,
+        "name": "persik",
+        "players": [
+            {
+                "id": 1,
+                "team_id": 1,
+                "name": "fagundes",
+                "age": 21,
+                "position": "CF"
+            },
+            {
+                "id": 2,
+                "team_id": 1,
+                "name": "danilo",
+                "age": 23,
+                "position": "SS"
+            },
+            {
+                "id": 3,
+                "team_id": 1,
+                "name": "gonzales",
+                "age": 24,
+                "position": "SS"
+            }
+        ]
+    }
+}
