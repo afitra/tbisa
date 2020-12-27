@@ -120,8 +120,6 @@ method: GET
 request params :  type   Path Variables
 
                 id : int, required
- 
-       
 
 
 example
