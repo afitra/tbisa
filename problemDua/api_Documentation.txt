@@ -1,4 +1,5 @@
-
+gunakan db mysql dan set nama DB di .env dengan key "DATABASE_NAME"
+jangan lupa isi "PORT" di .env sesuai kebutuhan
 
 
 request /api/v1/team 
